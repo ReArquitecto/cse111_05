@@ -107,6 +107,9 @@ namespace Unit05.Game.Scripting
             {
                 Snake snake = (Snake)cast.GetFirstActor("snake");
                 List<Actor> segments = snake.GetSegments();
+
+                Snake snake2 = (Snake)cast.GetFirstActor("snake2");
+                List<Actor> segments2 = snake2.GetSegments();
                 // Food food = (Food)cast.GetFirstActor("food");
 
                 // create a "game over" message
@@ -121,6 +124,10 @@ namespace Unit05.Game.Scripting
 
                 // make everything white
                 foreach (Actor segment in segments)
+                {
+                    segment.SetColor(Constants.WHITE);
+                }
+                foreach (Actor segment in segments2)
                 {
                     segment.SetColor(Constants.WHITE);
                 }
