@@ -17,15 +17,14 @@ namespace Unit05
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
-            Point start = new Point(Constants.MAX_X / 2, Constants.MAX_Y / 2);
+            Point start1 = new Point(Constants.MAX_X / 3, Constants.MAX_Y / 2);
+            Point start2 = new Point(Constants.MAX_X * 2 / 3, Constants.MAX_Y / 2);
             Color color = Constants.GREEN;
 
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake(start, color));
-            cast.AddActor("snake", new Snake(start, color));
-            cast.AddActor("score", new Score());
+            cast.AddActor("snake", new Snake(start1, color));
+            cast.AddActor("snake2", new Snake(start2, color));
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
