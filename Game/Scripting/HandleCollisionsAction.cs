@@ -132,6 +132,11 @@ namespace Unit05.Game.Scripting
                     segment.SetColor(Constants.WHITE);
                 }
                 // food.SetColor(Constants.WHITE);
+
+                if(_isGameOver){
+                    snake.setGrow(0);
+                    snake2.setGrow(0);
+                }
             }
         }
 

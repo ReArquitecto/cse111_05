@@ -10,6 +10,7 @@ namespace Unit05.Game.Casting
     /// </summary>
     public class Snake : Actor
     {
+        int tailGrow = 1;
         private List<Actor> _segments = new List<Actor>();
 
         /// <summary>
@@ -79,8 +80,8 @@ namespace Unit05.Game.Casting
             {
                 segment.MoveNext();
             }
-            
-            this.GrowTail(1);
+
+            this.GrowTail(tailGrow);
 
             for (int i = _segments.Count - 1; i > 0; i--)
             {
@@ -122,6 +123,9 @@ namespace Unit05.Game.Casting
                 segment.SetColor(sColor);
                 _segments.Add(segment);
             }
+        }
+        public void setGrow(int newGrow){
+            tailGrow = newGrow;
         }
     }
 }
