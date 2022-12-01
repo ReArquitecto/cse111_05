@@ -79,6 +79,8 @@ namespace Unit05.Game.Casting
             {
                 segment.MoveNext();
             }
+            
+            this.GrowTail(1);
 
             for (int i = _segments.Count - 1; i > 0; i--)
             {
